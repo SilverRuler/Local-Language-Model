@@ -9,7 +9,7 @@ from peft import LoraConfig, prepare_model_for_kbit_training
 from trl import SFTTrainer, SFTConfig
 import os
 
-# 1. 경로 설정
+# 1. 경로 설정#
 base_model_path = "/mnt/g/ollama/gemma-4-E4B-it"
 dataset_id = "cognitivecomputations/dolphin-coder"
 output_dir = "/mnt/g/ollama/gemma-4-E4B-dolphin-adapter"
