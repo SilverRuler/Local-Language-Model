@@ -2,7 +2,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 
-# 1. 경로 설정#
+# 1. 경로 설정##
 base_model_path = "/mnt/g/ollama/gemma-4-E4B-it"
 adapter_path = "/mnt/g/ollama/gemma-4-E4B-dolphin-adapter"
 merged_output_dir = "/mnt/g/ollama/gemma-4-E4B-dolphin-merged"
