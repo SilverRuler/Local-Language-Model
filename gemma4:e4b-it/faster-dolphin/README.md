@@ -1,6 +1,16 @@
 success but inefficient
 <br>
 
+```
+train -> split dataset number
+split="train[:]"
+
+or
+
+split="train"
+```
+
+
 ```bash
 sudo nano /etc/wsl.conf
 
