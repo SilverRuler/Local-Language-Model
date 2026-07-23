@@ -24,3 +24,7 @@ openclaw gateway status
 openclaw devices list
 openclaw devices approve <request-ID>
 ```
+
+```
+더 찾아야할게 생기면 내 오픈클로 대화 pdf 참조
+```
