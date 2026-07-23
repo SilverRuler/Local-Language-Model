@@ -165,7 +165,7 @@ nano ~/.openclaw/openclaw.json
   "channels": {
     "telegram": {
       "enabled": true,
-      "botToken": "BOT_TOKEN",
+      "botToken": "니토큰",
       "allowFrom": ["*"],
       "dmPolicy": "open",
       "groups": {
@@ -449,7 +449,7 @@ with open(path, 'w') as f: json.dump(d, f, indent=2)
 | 항목 | 값 |
 |------|-----|
 | 봇 이름 | `@Furen_Notifier_Bot` |
-| 봇 토큰 | `BOT_TOKEN` |
+| 봇 토큰 | `니토큰` |
 | Chat ID | `1777952457` |
 
 ### openclaw.json 채널 설정
@@ -611,7 +611,7 @@ curl http://172.17.0.1:11434/api/tags
 | 기본 모델 | `ollama/gemma4-uncensored:latest` |
 | ollama 주소 | `http://172.17.0.1:11434` |
 | 텔레그램 봇 | `@Furen_Notifier_Bot` |
-| 텔레그램 토큰 | `BOT_TOKEN` |
+| 텔레그램 토큰 | `니토큰` |
 | Chat ID | `1777952457` |
 | 게이트웨이 토큰 | `TOKEN` |
 
@@ -771,7 +771,7 @@ bash ~/openclaw/start.sh
 ```bash
 cat > ~/openclaw/start.sh << 'SCRIPT'
 #!/bin/bash
-TELEGRAM_TOKEN="BOT_TOKEN"
+TELEGRAM_TOKEN="니토큰"
 CHAT_ID="1777952457"
 OLLAMA_URL="http://172.17.0.1:11434"
 MODEL="gemma4-uncensored:latest"
