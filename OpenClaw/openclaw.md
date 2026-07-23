@@ -2,7 +2,7 @@
 
 > 이 문서 하나만 보면 처음부터 끝까지 전부 다시 세팅 가능.
 > 마지막 업데이트: 2026-07-23
-> 서버: `base@10.8.0.14` / 비번: `니비번`
+> 서버: `YOUR_ID@10.8.0.14` / 비번: `니비번`
 
 ---
 
@@ -27,15 +27,15 @@
 
 | 항목 | 값 |
 |------|-----|
-| 서버 SSH | `ssh base@10.8.0.14` / pw: `니비번` |
-| 대시보드 도메인 | `https://oc.silverruler.xyz` (Cloudflare → origin) |
+| 서버 SSH | `ssh YOUR_ID@10.8.0.14` / pw: `니비번` |
+| 대시보드 도메인 | `https://니도메인 SSL/TLS필수` (Cloudflare → origin) |
 | 대시보드 포트 | `18789` |
 | ollama 서버 | `http://172.17.0.1:11434` |
 | docker compose 위치 | `~/openclaw/` |
-| openclaw 설정 디렉토리 | `~/.openclaw/` (= `/home/base/.openclaw`) |
+| openclaw 설정 디렉토리 | `~/.openclaw/` (= `/home/YOUR_ID/.openclaw`) |
 
-> ⚠️ **중요**: 컨테이너가 마운트하는 실제 경로는 `/home/base/.openclaw` 이다.
-> `/root/.openclaw` 는 존재하지 않음. 편집할 파일은 항상 `/home/base/.openclaw/openclaw.json`
+> ⚠️ **중요**: 컨테이너가 마운트하는 실제 경로는 `/home/YOUR_ID/.openclaw` 이다.
+> `/root/.openclaw` 는 존재하지 않음. 편집할 파일은 항상 `/home/YOUR_ID/.openclaw/openclaw.json`
 
 ---
 
@@ -44,7 +44,7 @@
 ### 2-1. git clone (최초 1회)
 
 ```bash
-ssh base@10.8.0.14
+ssh YOUR_ID@10.8.0.14
 cd ~
 git clone <openclaw_repo_url> openclaw
 cd openclaw
@@ -60,8 +60,8 @@ cp .env.example .env
 `.env` 필수 항목:
 
 ```env
-OPENCLAW_CONFIG_DIR=/home/base/.openclaw
-OPENCLAW_WORKSPACE_DIR=/home/base/.openclaw/workspace
+OPENCLAW_CONFIG_DIR=/home/YOUR_ID/.openclaw
+OPENCLAW_WORKSPACE_DIR=/home/YOUR_ID/.openclaw/workspace
 OPENCLAW_GATEWAY_PORT=18789
 OPENCLAW_BRIDGE_PORT=18790
 OPENCLAW_GATEWAY_BIND=lan
@@ -90,7 +90,7 @@ docker build -t openclaw:local .
 
 ## 3. openclaw.json 핵심 설정
 
-**파일 위치: `/home/base/.openclaw/openclaw.json`**
+**파일 위치: `/home/YOUR_ID/.openclaw/openclaw.json`**
 
 처음 설치 시 존재하지 않으면 생성:
 
@@ -140,7 +140,7 @@ nano ~/.openclaw/openclaw.json
     "mode": "merge",
     "providers": {
       "ollama": {
-        "baseUrl": "http://172.17.0.1:11434",
+        "YOUR_IDUrl": "http://172.17.0.1:11434",
         "api": "ollama",
         "apiKey": "OLLAMA_API_KEY",
         "models": [
@@ -315,7 +315,7 @@ echo "새 토큰: $NEW_TOKEN"
 # openclaw.json 업데이트
 python3 -c "
 import json
-path = '/home/base/.openclaw/openclaw.json'
+path = '/home/YOUR_ID/.openclaw/openclaw.json'
 with open(path) as f: d = json.load(f)
 d['gateway']['auth']['token'] = '$NEW_TOKEN'
 with open(path, 'w') as f: json.dump(d, f, indent=2)
@@ -363,7 +363,7 @@ cd ~/openclaw && docker compose up -d
 ```bash
 python3 -c "
 import json
-path = '/home/base/.openclaw/openclaw.json'
+path = '/home/YOUR_ID/.openclaw/openclaw.json'
 with open(path) as f: d = json.load(f)
 origins = d['gateway']['controlUi']['allowedOrigins']
 new_origin = 'http://새IP주소:18789'
@@ -401,7 +401,7 @@ docker exec openclaw-openclaw-gateway-1 \
 ```bash
 python3 -c "
 import json
-path = '/home/base/.openclaw/openclaw.json'
+path = '/home/YOUR_ID/.openclaw/openclaw.json'
 with open(path) as f: d = json.load(f)
 d['agents']['defaults']['model'] = 'ollama/새모델명:tag'
 with open(path, 'w') as f: json.dump(d, f, indent=2)
@@ -431,9 +431,9 @@ cd ~/openclaw && docker compose restart openclaw-gateway
 ```bash
 python3 -c "
 import json
-path = '/home/base/.openclaw/openclaw.json'
+path = '/home/YOUR_ID/.openclaw/openclaw.json'
 with open(path) as f: d = json.load(f)
-d['models']['providers']['ollama']['baseUrl'] = 'http://새ollama주소:11434'
+d['models']['providers']['ollama']['YOUR_IDUrl'] = 'http://새ollama주소:11434'
 with open(path, 'w') as f: json.dump(d, f, indent=2)
 "
 ```
@@ -570,7 +570,7 @@ cd ~/openclaw && docker compose up -d
 **원인:** origin은 허용됐지만 토큰이 틀림
 **해결:**
 ```bash
-python3 -c "import json; d=json.load(open('/home/base/.openclaw/openclaw.json')); print(d['gateway']['auth']['token'])"
+python3 -c "import json; d=json.load(open('/home/YOUR_ID/.openclaw/openclaw.json')); print(d['gateway']['auth']['token'])"
 ```
 출력된 값과 대시보드 입력 토큰 비교.
 
