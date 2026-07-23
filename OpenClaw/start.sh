@@ -5,8 +5,8 @@
 # 실행: bash ~/openclaw/start.sh
 # ─────────────────────────────────────────────
 
-TELEGRAM_TOKEN="BOT_TOKEN"
-CHAT_ID="1777952457"
+TELEGRAM_TOKEN="니토큰"
+CHAT_ID="니챗아이디"
 OLLAMA_URL="http://172.17.0.1:11434"
 MODEL="gemma4-uncensored:latest"
 
