@@ -605,7 +605,7 @@ curl http://172.17.0.1:11434/api/tags
 | 항목 | 값 |
 |------|-----|
 | 서버 IP (VPN) | `10.8.0.14` |
-| 외부 IP | `152.67.210.39` |
+| 외부 IP | `니주소` |
 | 대시보드 | `https://oc.silverruler.xyz` |
 | 포트 | `18789` (gateway), `18790` (bridge) |
 | 기본 모델 | `ollama/gemma4-uncensored:latest` |
@@ -613,7 +613,7 @@ curl http://172.17.0.1:11434/api/tags
 | 텔레그램 봇 | `@Furen_Notifier_Bot` |
 | 텔레그램 토큰 | `니토큰` |
 | Chat ID | `1777952457` |
-| 게이트웨이 토큰 | `TOKEN` |
+| 게이트웨이 토큰 | `니토큰` |
 
 ---
 
