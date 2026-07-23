@@ -42,5 +42,20 @@ mv /tmp/openclaw.json.new ~/.openclaw/openclaw.json
 ```
 
 ```
+#도커기반이라 홈 디렉터리를 인식하는데 있어서 컨테이너의 /home/node/.openclaw/workspace 를 인식하는데 그걸 수정해야함
+#docker-compose.yml에 변수로 되어있다
+#volumes:
+#  - ${OPENCLAW_CONFIG_DIR}:/home/node/.openclaw
+#  - ${OPENCLAW_WORKSPACE_DIR}:/home/node/.openclaw/workspace
+#즉 .env를 봐야한다
+OPENCLAW_CONFIG_DIR=/home/base/.openclaw
+OPENCLAW_WORKSPACE_DIR=/home/base/.openclaw/workspace
+OPENCLAW_GATEWAY_PORT=18789
+OPENCLAW_BRIDGE_PORT=18790
+OPENCLAW_GATEWAY_BIND=lan
+OPENCLAW_GATEWAY_TOKEN=TOKEN
+```
+
+```
 #더 찾아야할게 생기면 내 오픈클로 대화 pdf 참조
 ```
