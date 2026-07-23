@@ -26,5 +26,14 @@ openclaw devices approve <request-ID>
 ```
 
 ```
+터미널에서 agent 키는법
+openclaw tui
+
+이 명령어들은 Gateway가 떠 있어야 정상 동작합니다
+openclaw gateway status
+openclaw gateway start
+```
+
+```
 더 찾아야할게 생기면 내 오픈클로 대화 pdf 참조
 ```
