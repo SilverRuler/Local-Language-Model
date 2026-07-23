@@ -18,3 +18,9 @@ wsl hostname -I
 docker exec openclaw-openclaw-gateway-1 node dist/index.js pairing list
 docker exec openclaw-openclaw-gateway-1 node dist/index.js pairing approve --code <코드>
 ```
+
+```
+openclaw gateway status
+openclaw devices list
+openclaw devices approve <request-ID>
+```
