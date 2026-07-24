@@ -32,6 +32,9 @@ openclaw tui
 #이 명령어들은 Gateway가 떠 있어야 정상 동작합니다
 openclaw gateway status
 openclaw gateway start
+
+#설정 같은거 문제생기면 닥터로 수정
+openclaw doctor
 ```
 
 ```
