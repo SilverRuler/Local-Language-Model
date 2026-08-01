@@ -1,4 +1,9 @@
 ```
+#260801 또 지랄났네
+openclaw gateway --allow-unconfigured
+일단 이걸로 임시로 게이트웨이 켜서 작동시키면 내 설정에 의해서 젬마4로 동작한다
+```
+```
 #WSL2
 ~/.bashrc
 
