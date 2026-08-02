@@ -1,4 +1,8 @@
 ```
+#설치 가이드 페이지
+https://omniroute.online/#quickstart
+```
+```
 root@gemini77:~# omniroute
   📋 Loaded env from /root/.omniroute/.env
   📋 Loaded env from /root/.nvm/versions/node/v24.18.0/lib/node_modules/omniroute/.env
