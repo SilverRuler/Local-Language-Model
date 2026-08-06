@@ -9,7 +9,7 @@ done
 ```
 
 ```
-#셋업, WSL2일 경우 다시킬때 매번 다시해야함
+#초기세팅, WSL2일 경우 다시킬때 매번 다시해야함
 omniroute setup-claude \
   --remote http://옴니라우트주소:20128
 ```
