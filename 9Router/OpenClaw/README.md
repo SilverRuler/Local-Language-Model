@@ -1,3 +1,20 @@
+```
+#설정 순서  (커스텀 프로바이더 -> 속도조절 안됨)
+openclaw configure
+local 선택
+model 선택
+custom provider 선택
+http://127.0.0.1:20129/v1
+키 입력
+OpenAI-compatible 선택
+Model ID : auto/best-chat    // oc/hy3-free
+Endpoint ID 그냥 엔터
+Model alias 마음대로 지정
+```
+```
+결론은 클코에게 세팅하라고 시키는게 빠름
+```
+
 # OpenClaw & OmniRoute 서버 구축 및 설정 가이드 (GCP 환경)
 
 이 문서는 GCP 서버 환경에서 **OmniRoute**를 AI API 프록시로 활용하여 **OpenClaw** 에이전트를 전역으로 구축하고, Cloudflare를 통한 외부 보안 접속(SSL/TLS) 및 텔레그램 봇 연동을 완료하기까지의 모든 과정을 상세하게 기록한 문서입니다.
