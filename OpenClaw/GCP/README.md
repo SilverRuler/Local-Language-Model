@@ -31,7 +31,7 @@ OpenClaw가 Ollama 대신 OmniRoute(OpenAI 호환 API)를 바라보도록 설정
   "omniroute": {
     "baseUrl": "http://127.0.0.1:20128/v1",
     "api": "openai",
-    "apiKey": "sk-96dd655f50ae577e-7d04b8-f85267f7",
+    "apiKey": "YOUR_KEY",
     "models": [
       {
         "id": "auto/best-chat",
