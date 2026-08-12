@@ -22,3 +22,8 @@ nano ~/.claude/settings.json
 
 여기서 9Router_API_KEY는 9Router Dashboard에서 발급된 키를 넣으면 됩니다.
 ```
+```
+이후
+claude
+만 실행하면 Claude Code → 127.0.0.1:20129/v1 → 9Router → oc/hy3-free로 가는 구성이 됩니다.
+```
