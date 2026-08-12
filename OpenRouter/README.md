@@ -11,3 +11,12 @@ base_url="https://openrouter.ai/api/v1"
 #모델 목록 확인 API
 curl https://openrouter.ai/api/v1/models
 ```
+
+```
+#할 필요 있나 싶음
+openrouter.ai의 
+srt 스크립트 번역 테스트
+openwebui 연동
+openclaw 연동
+claude code 연동
+```
