@@ -86,7 +86,7 @@
           "requireMention": true
         }
       },
-      "botToken": "BOT_TOKEN"
+      "botToken": "TELE_BOT_TOKEN"
     }
   },
   "skills": {
@@ -189,7 +189,7 @@
   },
   "commands": {
     "ownerAllowFrom": [
-      "telegram:1777952457"
+      "telegram:CHANNEL_KEY"
     ]
   }
 }
