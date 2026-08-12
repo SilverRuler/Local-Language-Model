@@ -44,7 +44,7 @@
       "omniroute": {
         "baseUrl": "http://127.0.0.1:20128/v1",
         "api": "openai-completions",
-        "apiKey": "sk-96dd655f50ae577e-7d04b8-f85267f7",
+        "apiKey": "YOUR_KEY",
         "models": [
           {
             "id": "auto/best-chat",
@@ -86,7 +86,7 @@
           "requireMention": true
         }
       },
-      "botToken": "8653818281:AAG-jsjWnKcLyDG7Olbr4iqsvSXrboSSyh0"
+      "botToken": "TELE_BOT_TOKEN"
     }
   },
   "skills": {
@@ -189,7 +189,7 @@
   },
   "commands": {
     "ownerAllowFrom": [
-      "telegram:1777952457"
+      "telegram:CHANNEL_KEY"
     ]
   }
 }
