@@ -30,7 +30,7 @@ TEMPERATURE = 0.3
 REQUEST_TIMEOUT_SEC = 240
 
 # 실제 API 키
-API_KEY = "sk-909b3700709a6147-95osub-06f3077f"
+API_KEY = "YOUR_KEY"
 
 # =================================================
 
