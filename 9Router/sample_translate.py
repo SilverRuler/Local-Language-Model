@@ -29,33 +29,24 @@ TEMPERATURE = 0.3
 # 요청 최대 대기 시간
 REQUEST_TIMEOUT_SEC = 240
 
-# 환경변수 이름
-API_KEY_ENV = "NINEROUTER_KEY"
+# 실제 API 키
+API_KEY = "sk-909b3700709a6147-95osub-06f3077f"
 
 # =================================================
 
 
 def get_api_key():
     """
-    9Router API Key를 환경변수에서 가져옵니다.
+    설정된 9Router API Key를 반환합니다.
     """
-
-    api_key = os.environ.get(API_KEY_ENV)
-
-    if not api_key:
+    if not API_KEY:
         print()
         print("=" * 60)
-        print("[ERROR] 9Router API Key가 없습니다.")
-        print()
-        print("먼저 다음 명령으로 API Key를 설정하세요:")
-        print()
-        print("  export NINEROUTER_KEY='YOUR_API_KEY'")
-        print()
+        print("[ERROR] 9Router API Key가 설정되지 않았습니다.")
         print("=" * 60)
         sys.exit(1)
 
-    return api_key
-
+    return API_KEY
 
 async def call_9router_api_stream(
     session,
