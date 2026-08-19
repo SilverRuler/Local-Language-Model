@@ -3,6 +3,14 @@
 alias cloo="omniroute launch --profile auto-best-coding --dangerously-skip-permissions --remote http://oci2.silverruler.xyz:20128"
 ```
 ```
+방법 B. 설정 파일 직접 수정하기
+  Claude Code가 현재 프로필의 설정을 저장하는 JSON 파일을 열어 모델을 수동으로 변경합니다.
+
+  • 파일 경로: /home/ubuntu/.claude/profiles/auto-best-coding/settings.json
+  • 해당 파일의 "model" 값을 "auto/best-coding"으로 수정하고 저장합니다.
+
+```
+```
 #tmux에 무한루프 엔터 신호 보내기
 
 while true
