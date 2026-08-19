@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(printenv *)",
+      "WebSearch",
+      "WebFetch(domain:www.google.com)",
+      "WebFetch(domain:www.reddit.com)",
+      "WebFetch(domain:html.duckduckgo.com)",
+      "WebFetch(domain:www.bing.com)",
+      "WebFetch(domain:en.softonic.com)",
+      "WebFetch(domain:web.archive.org)",
+      "WebFetch(domain:silverpencil.tistory.com)",
+      "Bash(sshpass *)",
+      "Bash(tmux list-sessions *)",
+      "Bash(tmux list-panes *)",
+      "Bash(tmux capture-pane *)",
+      "Bash(tmux send-keys *)",
+      "Bash(chmod +x *)",
+      "Bash(python3 *)",
+      "Bash(tmux kill-session *)",
+      "Bash(tmux new-session *)"
+    ]
+  }
+}
