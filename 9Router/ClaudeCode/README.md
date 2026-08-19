@@ -1,4 +1,7 @@
 ```
+tar받고 /root에 압축풀고 settings.local.json에 키값 변경
+```
+```
 1. ~/.claude/settings.json 설정
 
 WSL2에서:
