@@ -1,4 +1,8 @@
 ```
+#WSL2, GCP 에서 로컬 계정으로 clo
+alias cloo="omniroute launch --profile auto-best-coding --dangerously-skip-permissions --remote http://oci2.silverruler.xyz:20128"
+```
+```
 #tmux에 무한루프 엔터 신호 보내기
 
 while true
