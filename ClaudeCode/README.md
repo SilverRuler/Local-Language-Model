@@ -1,4 +1,10 @@
 ```
+#GCP ubuntu 로컬계정
+alias clo="omniroute launch --profile auto-best-coding --dangerously-skip-permissions"
+alias cloo="omniroute launch --profile auto-best-coding --dangerously-skip-permissions --remote http://oci2.silverruler.xyz:20128"
+alias cl9="claude --dangerously-skip-permissions"
+```
+```
 #WSL2, GCP 에서 로컬 계정으로 clo
 alias cloo="omniroute launch --profile auto-best-coding --dangerously-skip-permissions --remote http://oci2.silverruler.xyz:20128"
 ```
