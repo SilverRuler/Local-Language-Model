@@ -1,4 +1,9 @@
 ```
+  pm2 delete 9router
+    pm2 start 9router --name '9router' -- --port 20129 --tray
+    pm2 save
+```
+```
 #옴니라우트처럼 자동라우트 기능은 없음 oc 계열의 free 사용해야함
 #인스톨 정리, 노드 설치 필수
 npm install -g 9router
