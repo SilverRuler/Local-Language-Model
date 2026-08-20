@@ -1,4 +1,7 @@
 ```
+pm2 start omniroute --name "omniroute"
+```
+```
 #설치 가이드 페이지
 https://omniroute.online/#quickstart
 ```
