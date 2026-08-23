@@ -7,7 +7,7 @@ import asyncio
 import aiohttp
 from tqdm import tqdm
 
-# ==================== 설정 ====================
+# ==================== 설정 ==================== 
 
 # opencode Zen - OpenAI 호환(chat/completions) 엔드포인트
 API_URL = "https://opencode.ai/zen/v1/chat/completions"
