@@ -7,7 +7,7 @@ import asyncio
 import aiohttp
 from tqdm import tqdm
 
-# ==================== 설정 ==================== 
+# ==================== 설정 ====================
 
 # opencode Zen - OpenAI 호환(chat/completions) 엔드포인트
 API_URL = "https://opencode.ai/zen/v1/chat/completions"
@@ -16,11 +16,12 @@ API_URL = "https://opencode.ai/zen/v1/chat/completions"
 SOURCE_LANGUAGE = "Japanese"
 # SOURCE_LANGUAGE = "English"
 
-# opencode Zen 무료 모델 (Big Pickle)
-MODEL_NAME = "big-pickle"
+# opencode Zen 무료 모델 (Ox Alpha Free)
+# 표시명이 아닌 모델 ID 사용: Ox Alpha Free -> x-preview-f-free
+MODEL_NAME = "x-preview-f-free"
 
 # 동시 요청 수
-MAX_CONCURRENT_REQUESTS = 4
+MAX_CONCURRENT_REQUESTS = 1
 
 # 청크당 자막 블록 수
 CHUNK_SIZE = 30
