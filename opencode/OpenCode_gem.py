@@ -31,6 +31,12 @@ TEMPERATURE = 0.3
 # 요청 최대 대기 시간
 REQUEST_TIMEOUT_SEC = 240
 
+# 청크당 최대 재시도 횟수 (실패 시 추가로 3번 더 시도)
+MAX_RETRIES = 3
+
+# 재시도 대기 시간 (초) - 재시도 횟수에 비례해 증가 (5초, 10초, 15초)
+RETRY_BACKOFF_SEC = 5
+
 # 실제 API 키 (opencode Zen)
 API_KEY = "YOUR_KEY"
 
@@ -260,26 +266,59 @@ async def translate_chunk(
             "start": time.monotonic()
         }
 
+        last_error = None
+
         try:
 
-            translated_body = (
-                await call_opencode_api_stream(
-                    session,
-                    srt_chunk,
-                    key,
-                    active_progress,
-                    api_key
-                )
-            )
+            # 최초 1회 + 실패 시 MAX_RETRIES번 재시도
+            for attempt in range(1 + MAX_RETRIES):
 
-            return translated_body, True
+                if attempt > 0:
 
-        except Exception as e:
+                    wait_sec = RETRY_BACKOFF_SEC * attempt
 
-            err_msg = str(e)
+                    pbar.write(
+                        f"    [{key}] {wait_sec}초 후 "
+                        f"재시도 {attempt}/{MAX_RETRIES}"
+                    )
 
+                    await asyncio.sleep(wait_sec)
+
+                try:
+
+                    translated_body = (
+                        await call_opencode_api_stream(
+                            session,
+                            srt_chunk,
+                            key,
+                            active_progress,
+                            api_key
+                        )
+                    )
+
+                    if attempt > 0:
+                        pbar.write(
+                            f"    [{key}] 재시도 성공"
+                        )
+
+                    return translated_body, True
+
+                except Exception as e:
+
+                    last_error = e
+
+                    pbar.write(
+                        f"    [{key}] 요청 실패 "
+                        f"(시도 {attempt + 1}/"
+                        f"{1 + MAX_RETRIES}): "
+                        f"{e}"
+                    )
+
+            # 모든 재시도 소진 -> 최종 실패 처리
             pbar.write(
-                f"    [{key}] 요청 실패: {err_msg}"
+                f"    [{key}] 재시도 "
+                f"{MAX_RETRIES}회 초과, "
+                f"최종 실패 처리: {last_error}"
             )
 
             return srt_chunk, False
