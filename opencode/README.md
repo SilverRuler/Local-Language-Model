@@ -1,6 +1,11 @@
 ```
 https://opencode.ai/ko
 ```
+```
+npm install -g opencode-ai
+opencode auth login
+->opencode zen
+```
 
 ```
 전체 모델 수: 64
