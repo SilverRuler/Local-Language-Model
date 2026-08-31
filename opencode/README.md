@@ -15,6 +15,13 @@
       -d '{"model":"big-pickle", "messages":[{"role":"user","content":"Hi"}]}'
 
 ```
+```
+260831
+빅피클 - 스텔스 및 특정 헤더 삽입해야함
+nemotron-3-ultra-free (NVIDIA 계열 경량 모델 추정)
+laguna-s-2.1-free (자체/오픈소스 기반 모델 추정)
+
+```
 
 ```
 https://opencode.ai/ko
