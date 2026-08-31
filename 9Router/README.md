@@ -1,4 +1,12 @@
 ```
+260831 기준
+oc 프로바이더들은 다 박살나서
+openrouter 프로바이더가 필요. openrouter에 가입해서 개별적으로 키 받고
+9라우터 프로바이더에서 오픈라우터 키 등록 및 가용한 모델들 전부다 클릭해주기 (네트워크 상황따라 fail 나는 모델도 있지만 일단 클릭)
+그후에 콤보 들어가서 oc 계열은 헤더 검증 필요하니까 패쓰하고 openrouter 계열로 몇몇개 넣어주고 실행
+```
+
+```
   pm2 delete 9router
     pm2 start 9router --name '9router' -- --port 20129 --tray
     pm2 save
