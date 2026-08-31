@@ -1,4 +1,22 @@
 ```
+260831 기준 무료 라우팅 모델 다 뒤짐
+
+  ### 💡 호출 예시 (Python / curl)
+
+  엔드포인트: https://opencode.ai/zen/v1/chat/completions
+  모델명: big-pickle
+
+  curl 예시:
+
+    curl -X POST https://opencode.ai/zen/v1/chat/completions \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer YOUR_KEY" \
+      -H "User-Agent: opencode/1.18.25" \
+      -d '{"model":"big-pickle", "messages":[{"role":"user","content":"Hi"}]}'
+
+```
+
+```
 https://opencode.ai/ko
 ```
 ```
