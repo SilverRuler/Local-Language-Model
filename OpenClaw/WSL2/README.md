@@ -1,4 +1,7 @@
 ```
+18789에 대한 접근은 트러블슈팅md 참고
+```
+```
   OpenClaw의 bind: "lan" 은 loopback(127.0.0.1)을 UI 접근에서 의도적으로 제한하는 모드입니다. curl로는 TCP 연결이 되지만, 브라우저로 localhost 또는 127.0.0.1로 접속하면
   OpenClaw가 request를 거부하거나 API 인증 단에서 막습니다.
   ──────
