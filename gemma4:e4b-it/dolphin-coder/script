@@ -1,0 +1,16 @@
+# 1. llama.cpp 변환 도구 다운로드 및 컴파일 (C++ 기반)
+git clone https://github.com/ggerganov/llama.cpp
+cd llama.cpp
+make -j
+
+# 2. 파이썬 변환 의존성 설치
+python3 -m pip install -r requirements.txt
+
+# 3. 허깅페이스 포맷(Safetensors)을 GGUF(F16) 원본으로 1차 변환 (수 분 소요)
+python3 convert_hf_to_gguf.py ../gemma-4-E4B-dolphin-merged --outfile ../gemma-4-E4B-dolphin-f16.gguf
+
+# 4. Ollama에서 가볍게 돌리기 위해 4-bit(Q4_K_M)로 2차 압축 (선택사항이지만 추천)
+./llama-quantize ../gemma-4-E4B-dolphin-f16.gguf ../gemma-4-E4B-dolphin-Q4_K_M.gguf Q4_K_M
+
+# 변환이 끝났으므로 원래 ollama 폴더로 복귀
+cd ..
